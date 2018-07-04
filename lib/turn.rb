@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 puts board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 user_input = " "
 
 def display_board(board)
+=======
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+user_input = " "
+token = "X" || "O"
+
+
+def display_board(board)
+  puts 'display board'
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
@@ -26,7 +35,11 @@ end
 
 #Is input correct and is the space empty?
 def valid_move?(board, index)
+<<<<<<< HEAD
   if !position_taken?(board, index) && index.between?(0, 8)
+=======
+  if position_taken?(board, index) == false && index.between?(0, 8)
+>>>>>>> 24d6ce882feca8911cb0699ead49904fe59f807a
     return true
   end
 end
@@ -51,6 +64,7 @@ def turn_count(board)
 end
 
 def turn(board)
+<<<<<<< HEAD
     puts "Please enter 1-9:" #asks for input
     user_input = gets.strip #gets user input
     index = input_to_index(user_input)
@@ -58,6 +72,14 @@ def turn(board)
     if valid_move?(board, index) 
       move(board, index, current_player(board))
     else
+=======
+counter = 0
+    puts "Please enter 1-9:" #asks for input
+    user_input = gets.strip #gets user input
+    index = input_to_index(user_input)
+    if valid_move?(board, index)
+      move(board, index, player(board))
+>>>>>>> 24d6ce882feca8911cb0699ead49904fe59f807a
       turn(board)
     end
   display_board(board)
