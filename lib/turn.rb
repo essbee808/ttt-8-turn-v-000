@@ -64,7 +64,6 @@ def turn_count(board)
 end
 
 def turn(board)
-<<<<<<< HEAD
     puts "Please enter 1-9:" #asks for input
     user_input = gets.strip #gets user input
     index = input_to_index(user_input)
