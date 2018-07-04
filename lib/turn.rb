@@ -79,7 +79,6 @@ counter = 0
     index = input_to_index(user_input)
     if valid_move?(board, index)
       move(board, index, player(board))
->>>>>>> 24d6ce882feca8911cb0699ead49904fe59f807a
       turn(board)
     end
   display_board(board)
